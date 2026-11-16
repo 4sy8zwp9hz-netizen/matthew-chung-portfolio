@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 404" role="img" aria-labelledby="title desc">
+  <title id="title">Connected manufacturing evidence</title>
+  <desc id="desc">Synthetic wafer illustration. An orange cluster is connected to inspection, test, and process history. This is not measured data.</desc>
+  <defs>
+    <pattern id="cells" width="15" height="15" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="11" height="11" rx="1.5" fill="#7caa98"/></pattern>
+    <clipPath id="wafer"><circle cx="218" cy="185" r="136"/></clipPath>
+  </defs>
+  <g fill="none" stroke="#cfdbd0" stroke-width="1"><path d="M26 60H514M26 185H514M26 310H514M83 25V342M218 25V342M353 25V342M488 25V342"/><circle cx="218" cy="185" r="156"/><circle cx="218" cy="185" r="167" stroke-dasharray="2 7"/></g>
+  <circle cx="218" cy="185" r="138" fill="#dae6da" stroke="#a1bbac" stroke-width="1.5"/>
+  <circle cx="218" cy="185" r="132" fill="url(#cells)"/>
+  <g clip-path="url(#wafer)">
+    <path d="M122 94h11v11h-11zm15 30h11v11h-11zm-30 45h11v11h-11zm45 75h11v11h-11zm-15 30h11v11h-11zm75-180h11v11h-11zm45 15h11v11h-11zm30 30h11v11h-11zm-75 150h11v11h-11zm30 0h11v11h-11zm45-30h11v11h-11zm30-30h11v11h-11z" fill="#2f7467"/>
+    <path d="M257 169h11v11h-11zm15 0h11v11h-11zm15 0h11v11h-11zm-30 15h11v11h-11zm15 0h11v11h-11zm15 0h11v11h-11zm-45 15h11v11h-11zm15 0h11v11h-11zm15 0h11v11h-11zm15 0h11v11h-11zm-30 15h11v11h-11zm15 0h11v11h-11zm15 0h11v11h-11z" fill="#bd7751"/>
+    <path d="M257 199h11v11h-11zm15-15h11v11h-11zm15 15h11v11h-11z" fill="#985134"/>
+  </g>
+  <path d="M211 317l7-7 7 7" fill="#eaf0e7" stroke="#a1bbac"/>
+  <rect x="236" y="161" width="70" height="72" rx="5" fill="none" stroke="#9c5c3c" stroke-width="2"/>
+  <path d="M306 197h56v-70h22M362 197h22M362 197v70h22" stroke="#6f8c7b" stroke-width="1.5" fill="none"/>
+  <circle cx="362" cy="197" r="3" fill="#436b58"/>
+  <g font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#264d42">
+    <rect x="380" y="107" width="137" height="40" rx="4" fill="#f7f9f3" stroke="#c3d3c5"/><text x="396" y="131">Inspection</text>
+    <rect x="380" y="177" width="137" height="40" rx="4" fill="#f7f9f3" stroke="#c3d3c5"/><text x="396" y="201">Electrical test</text>
+    <rect x="380" y="247" width="137" height="40" rx="4" fill="#f7f9f3" stroke="#c3d3c5"/><text x="396" y="271">Process history</text>
+  </g>
+  <g font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#526f60"><circle cx="104" cy="365" r="4" fill="#7caa98"/><text x="115" y="369">Illustrative chip sites</text><rect x="278" y="361" width="8" height="8" rx="1" fill="#bd7751"/><text x="295" y="369">Pattern to investigate</text></g>
+</svg>
