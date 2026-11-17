@@ -19,157 +19,99 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="wrap navigation" aria-label="Main navigation">
-      <a class="wordmark" href="#top"><span class="monogram" aria-hidden="true">MC</span><span>Matthew Chung</span></a>
-      <div class="nav-links">
-        <a href="#investigations">Investigations</a>
-        <a href="#flagships">Flagships</a>
-        <a href="#quality">Quality engineering</a>
-        <a class="nav-github" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-      </div>
+  <header class="masthead">
+    <nav class="wrap nav" aria-label="Main navigation">
+      <a class="wordmark" href="#top"><span class="monogram" aria-hidden="true">MC</span>Matthew Chung</a>
+      <div class="nav-links"><a href="#investigations">Investigations</a><a href="#flagships">Flagships</a><a class="nav-github" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio" target="_blank" rel="noopener noreferrer">GitHub portfolio <span aria-hidden="true">↗</span></a></div>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero wrap" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <div class="hero-identity">
-          <img class="headshot" src="assets/matthew-chung-headshot.jpg" width="104" height="104" alt="Matthew Chung — AI-generated headshot">
-          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Quality · Manufacturing · Software</p>
+      <div class="intro" id="quality">
+        <div class="identity">
+          <img src="assets/matthew-chung-headshot.jpg" width="80" height="80" alt="Matthew Chung — AI-generated headshot">
+          <div><strong>Matthew Chung</strong><p>Semiconductor manufacturing</p></div>
         </div>
-        <h1 id="hero-title">Quality engineering.<br><em>Evidence into action.</em></h1>
-        <p class="hero-intro">I’m Matthew Chung. I investigate manufacturing problems, qualify suppliers, and build tools that help engineering teams make better decisions.</p>
-        <p class="hero-detail">From technical audits to wafer-level analysis, my work connects sound engineering judgment with software people can use.</p>
-        <div class="actions">
-          <a class="button primary" href="#investigations">Explore the work <span aria-hidden="true">↓</span></a>
-          <a class="button secondary" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio" target="_blank" rel="noopener noreferrer">View GitHub portfolio <span aria-hidden="true">↗</span></a>
-        </div>
+        <h1 id="hero-title">Quality engineering<br>on the factory floor.</h1>
+        <p class="lede">I investigate why manufacturing results change, qualify suppliers, and conduct technical audits. When the evidence is scattered across systems, I build tools that let engineers follow it from a process step down to an individual chip.</p>
+        <div class="actions"><a class="button" href="https://4sy8zwp9hz-netizen.github.io/webpage_presentation_example/studies/resistance/" target="_blank" rel="noopener noreferrer">Open a wafer investigation <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio" target="_blank" rel="noopener noreferrer">View GitHub portfolio <span aria-hidden="true">↗</span></a></div>
+        <p class="ownership">I work with process, database, and IT teams from problem definition through rollout and support. <a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio/blob/main/case-studies/ENGINEERING_LEADERSHIP.md" target="_blank" rel="noopener noreferrer">My role and ownership <span aria-hidden="true">↗</span></a></p>
       </div>
-      <figure class="hero-visual">
-        <div class="visual-heading"><span class="eyebrow">From pattern to question</span><span class="figure-number">FIG. 01</span></div>
-        <img src="assets/evidence-map.svg" width="540" height="404" alt="Illustrative wafer map with a highlighted cluster, connecting a spatial pattern to inspection, test, and process history.">
-        <figcaption><span>One wafer. Connected evidence.</span><small>Synthetic illustration, not production data</small></figcaption>
-      </figure>
+
+      <section class="casebook" id="investigations" aria-labelledby="studies-title">
+        <div class="casebook-header"><h2 id="studies-title">Selected investigations</h2></div>
+        <article class="lead-study">
+          <p class="kicker">01 &nbsp;/&nbsp; Process investigation</p>
+          <h3>Did wafer geometry explain a shift in electrical resistance?</h3>
+          <p>Across 345 wafers, geometry variation looked like a possible lead. Once I accounted for average geometry, product family, timing, and shared process runs, the relationship nearly disappeared.</p>
+          <details><summary>See the comparison</summary>
+          <dl class="finding" aria-label="Rank association between geometry variability and resistance, full cohort of 345 wafers">
+            <div><dt>Before adjustment</dt><dd>0.229</dd></div>
+            <div><dt>After adjustment</dt><dd>0.040</dd></div>
+          </dl>
+          <p class="finding-key">Rank association across the same 345 wafers. A value near zero indicates little relationship in their rankings.</p></details>
+          <a class="text-link" href="https://4sy8zwp9hz-netizen.github.io/webpage_presentation_example/studies/resistance/" target="_blank" rel="noopener noreferrer">Explore the resistance study <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="second-study">
+          <p class="kicker">02 &nbsp;/&nbsp; Reliability investigation</p>
+          <h3>What changed during burn-in?</h3>
+          <p>I paired measurements taken before and after stress under matching test conditions. That let me compare how devices changed without mistaking a shift for a qualification failure.</p>
+          <a class="text-link" href="https://4sy8zwp9hz-netizen.github.io/webpage_presentation_example/studies/qualification/" target="_blank" rel="noopener noreferrer">Explore the qualification study <span aria-hidden="true">↗</span></a>
+        </article>
+        <p class="casebook-note">Both studies use anonymized observed data.</p>
+      </section>
     </section>
 
-    <div class="capability-strip wrap" aria-label="Engineering capabilities">
-      <p><span class="index">01</span> Investigate quality &amp; reliability</p>
-      <p><span class="index">02</span> Qualify suppliers &amp; audit processes</p>
-      <p><span class="index">03</span> Build &amp; operate engineering tools</p>
-    </div>
-
-    <section class="section wrap investigations" id="investigations" aria-labelledby="investigations-title">
-      <div class="section-heading">
-        <p class="eyebrow">Selected investigations</p>
-        <h2 id="investigations-title">The question comes first.</h2>
-        <p>What changed? Which population is affected? What evidence should guide the next engineering action?</p>
-      </div>
-      <div class="investigation-layout">
-        <a class="image-link investigation-preview" href="https://4sy8zwp9hz-netizen.github.io/webpage_presentation_example/" target="_blank" rel="noopener noreferrer" aria-label="Open the manufacturing investigations">
-          <div class="window-bar" aria-hidden="true"><span class="window-dots">● ● ●</span><span>Manufacturing / Studies</span><span>↗</span></div>
-          <img src="assets/investigations-preview.png" width="1265" height="1149" loading="lazy" alt="Public investigation reports: resistance shift and qualification and burn-in.">
-        </a>
-        <div class="investigation-copy">
-          <article class="study-summary">
-            <span class="eyebrow">Process investigation</span>
-            <h3>Understand an electrical shift.</h3>
-            <p>Compare wafer populations and examine process associations, then test whether the initial explanation holds up under closer scrutiny.</p>
-          </article>
-          <article class="study-summary">
-            <span class="eyebrow">Reliability investigation</span>
-            <h3>Put qualification results in context.</h3>
-            <p>Follow paired measurements and burn-in outcomes, with clear comparison groups and limits on what the evidence can establish.</p>
-          </article>
-          <a class="text-link" href="https://4sy8zwp9hz-netizen.github.io/webpage_presentation_example/" target="_blank" rel="noopener noreferrer">Explore the interactive investigations <span aria-hidden="true">↗</span></a>
-          <p class="caption">These reports use anonymized observed data. The software previews and demos below use fictional data.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="flagships-section" id="flagships" aria-labelledby="flagships-title">
+    <section id="flagships" class="platforms" aria-labelledby="platforms-title">
       <div class="wrap">
-        <div class="section-heading flagship-heading">
-          <p class="eyebrow">Two flagship systems</p>
-          <h2 id="flagships-title">The infrastructure behind<br>the investigations.</h2>
-          <p>One platform prepares the evidence. The other puts engineering tools within reach of the people who need them.</p>
+        <div class="section-head">
+          <p class="kicker">Flagship systems</p>
+          <h2 id="platforms-title">The tools behind the investigations</h2>
+          <p>I built one system to connect the manufacturing evidence and another to put engineering tools in the hands of the people using it.</p>
         </div>
-
-        <article class="flagship yield-project" aria-labelledby="yield-title">
-          <div class="flagship-intro">
-            <div><p class="project-number">01 / The analytical foundation</p><h3 id="yield-title">Manufacturing<br> Yield Platform</h3></div>
-            <div class="project-description">
-              <p>Start where yield shifted. Trace the change to work orders, wafers, and chips. Compare failure categories and check whether inspection and test patterns line up.</p>
-              <p>Automatic refresh keeps prepared views current, including historical corrections. Selected-wafer detail loads on demand; the last validated dataset stays available if a refresh fails.</p>
-              <div class="actions link-actions">
-                <a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio/blob/main/case-studies/YIELD.md" target="_blank" rel="noopener noreferrer">Read the case study <span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-analytics-platform" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
-              </div>
+        <div class="project-grid">
+          <article class="project" aria-labelledby="yield-title">
+            <header><p class="kicker">01 &nbsp;/&nbsp; Trace a yield loss</p><h3 id="yield-title">Manufacturing Yield Platform</h3></header>
+            <figure>
+              <a class="preview wafer-preview" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio/blob/main/case-studies/YIELD.md" target="_blank" rel="noopener noreferrer" aria-label="Read how engineers use the Yield Dashboard"><img src="assets/linked-wafer-maps.png" width="1600" height="900" loading="lazy" alt="Three fictional wafer maps highlight the same chip locations across inspection, electrical test, and reliability."></a>
+              <figcaption>Synthetic illustration · Follow the same chips across measurements.</figcaption>
+            </figure>
+            <div class="project-copy">
+              <p>When yield drops, engineers can trace the loss to a process step, work order, wafer, or chip. Linked maps show whether inspection and test patterns occur at the same locations.</p>
+              <p>The dashboard refreshes automatically and keeps the last validated data available if a refresh fails.</p>
+              <div class="evidence"><strong>34 months</strong> of inspection history, <strong>600M+</strong> stored test-parameter values, and <strong>17,000+</strong> wafers in prepared yield records.<small>November 4, 2026 snapshot. Values are individual measurements, not tests or chips.</small></div>
+              <div class="project-links"><a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio/blob/main/case-studies/YIELD.md" target="_blank" rel="noopener noreferrer">Yield case study <span aria-hidden="true">↗</span></a> <a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-analytics-platform" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">↗</span></a> <a class="text-link" href="assets/yield-summary.png">View dashboard screenshot</a></div>
             </div>
-          </div>
-          <div class="metrics" aria-label="Production data scale, November 4, 2026 snapshot">
-            <div><strong>34 <span>months</span></strong><span>of inspection history</span></div>
-            <div><strong>600M+</strong><span>stored test-parameter values</span></div>
-            <div><strong>17,000+</strong><span>wafers in prepared yield records</span></div>
-          </div>
-          <p class="metric-note">Production-scale snapshot · November 4, 2026 · Test values are individual parameter values, not a count of tests or chips.</p>
-          <figure class="project-visual">
-            <a href="https://github.com/4sy8zwp9hz-netizen/manufacturing-analytics-platform" target="_blank" rel="noopener noreferrer" aria-label="Explore the Yield Platform repository"><img src="assets/yield-summary.png" width="1600" height="650" loading="lazy" alt="Synthetic Yield Platform showing process, wafer, and chip yield by week with population definitions and drill-down controls."></a>
-            <figcaption><span>Process → wafer → chip. A connected view of yield.</span><span>Public synthetic application</span></figcaption>
-          </figure>
-          <p class="technical-line"><span>Under the hood</span> SQL Server → Python &amp; pandas → Parquet → Dash / Plotly</p>
-        </article>
+          </article>
 
-        <article class="flagship platform-project" aria-labelledby="platform-title">
-          <div class="flagship-intro">
-            <div><p class="project-number">02 / Shared engineering capability</p><h3 id="platform-title">Manufacturing<br> Application Platform</h3></div>
-            <div class="project-description">
-              <p>A shared browser portal for real engineering work—not just a collection of dashboards. Query data, compare equipment statistically, investigate wafer patterns, and complete manufacturing workflows.</p>
-              <p>I built and operate the platform, with centralized hosting, updates, health monitoring, and recovery. Two hosts share application workloads, with manual failover to a surviving host.</p>
-              <div class="actions link-actions">
-                <a class="text-link" href="https://engineering-workspace-demo.holykungfu.chatgpt.site/#stats" target="_blank" rel="noopener noreferrer">Try the fictional tools <span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio/blob/main/case-studies/MANUFACTURING_APPLICATION_PLATFORM.md" target="_blank" rel="noopener noreferrer">GitHub case study <span aria-hidden="true">↗</span></a>
-              </div>
+          <article class="project" aria-labelledby="platform-title">
+            <header><p class="kicker">02 &nbsp;/&nbsp; Compare equipment in a browser</p><h3 id="platform-title">Manufacturing Application Platform</h3></header>
+            <figure>
+              <a class="preview tools-preview" href="https://engineering-workspace-demo.holykungfu.chatgpt.site/#stats" target="_blank" rel="noopener noreferrer" aria-label="Try the fictional Stat Tools equipment comparison"><img src="assets/platform-stat-tools.jpg" width="1265" height="1130" loading="lazy" alt="Stat Tools compares measurements by equipment and plots the same wafers over time."></a>
+              <figcaption>Independent fictional-data demo · Compare equipment and check the timing.</figcaption>
+            </figure>
+            <div class="project-copy">
+              <p>Engineers use one browser portal to query measurements, compare equipment, examine wafer maps, and complete shift handoffs. They don’t need to install separate tools.</p>
+              <p>I operate the shared hosting, updates, monitoring, and recovery, including manual failover between two servers.</p>
+              <div class="evidence"><strong>6,136</strong> app opens &amp; reloads in about eight weeks, including <strong>3,270</strong> in October.<small>Sept 11–Nov 6, 2026. In the shorter Oct 16–Nov 6 logging window, 339 distinct client addresses were recorded, not a count of people.</small></div>
+              <div class="project-links"><a class="text-link" href="https://engineering-workspace-demo.holykungfu.chatgpt.site/#stats" target="_blank" rel="noopener noreferrer">Try Stat Tools <span aria-hidden="true">↗</span></a> <a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio/blob/main/case-studies/MANUFACTURING_APPLICATION_PLATFORM.md" target="_blank" rel="noopener noreferrer">GitHub case study <span aria-hidden="true">↗</span></a></div>
+              <p class="more-tools">Also in the demo: <a class="text-link" href="https://engineering-workspace-demo.holykungfu.chatgpt.site/#maps" target="_blank" rel="noopener noreferrer">Wafer maps <span aria-hidden="true">↗</span></a> · <a class="text-link" href="https://engineering-workspace-demo.holykungfu.chatgpt.site/#process" target="_blank" rel="noopener noreferrer">Process analysis <span aria-hidden="true">↗</span></a></p>
             </div>
-          </div>
-          <figure class="project-visual platform-visual">
-            <a href="https://engineering-workspace-demo.holykungfu.chatgpt.site/#stats" target="_blank" rel="noopener noreferrer" aria-label="Open the fictional Stat Tools demo"><img src="assets/platform-stat-tools.jpg" width="1265" height="1130" loading="lazy" alt="Stat Tools fictional preview: filter a manufacturing population and compare wafer measurements across equipment."></a>
-            <figcaption><span>Stat Tools: get from a manufacturing question to a useful comparison.</span><span>Independent fictional-data demo</span></figcaption>
-          </figure>
-          <div class="platform-bottom">
-            <p class="usage-stat"><strong>6,136</strong><span>app opens &amp; reloads in about eight weeks<br><small>Sept 11–Nov 6, 2026 · including 3,270 in October</small></span></p>
-            <div class="demo-links" aria-label="More fictional engineering tools"><span>Explore the tools</span><a href="https://engineering-workspace-demo.holykungfu.chatgpt.site/#maps" target="_blank" rel="noopener noreferrer">Wafer maps ↗</a><a href="https://engineering-workspace-demo.holykungfu.chatgpt.site/#process" target="_blank" rel="noopener noreferrer">Process analysis ↗</a></div>
-          </div>
-          <p class="caption">Usage measures activity, not people. Measurement details and distinct-client counts are in the case study.</p>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section wrap quality-section" id="quality" aria-labelledby="quality-title">
-      <div class="quality-intro">
-        <p class="eyebrow">Engineering judgment, end to end</p>
-        <h2 id="quality-title">More than<br> the software.</h2>
-        <p>The tools support the work. My foundation is quality engineering: understanding the process, evaluating risk, and making the evidence useful for the next decision.</p>
-        <a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio/blob/main/case-studies/ENGINEERING_LEADERSHIP.md" target="_blank" rel="noopener noreferrer">Technical direction &amp; ownership <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="quality-list">
-        <article><span class="index">01</span><div><h3>Qualification &amp; audits</h3><p>Supplier qualification, technical audits, and manufacturing readiness—connecting requirements with evidence and follow-up.</p></div></article>
-        <article><span class="index">02</span><div><h3>Investigation &amp; process control</h3><p>Root-cause investigations, SPC, inspection and test analysis, and traceability across wafers, lots, and process history.</p></div></article>
-        <article><span class="index">03</span><div><h3>Implementation &amp; ongoing ownership</h3><p>Problem definition through analysis, development, validation, rollout, and support, in collaboration with process, database, and IT owners.</p></div></article>
-      </div>
-    </section>
-
-    <aside class="personal-project wrap" aria-labelledby="personal-title">
-      <div><p class="eyebrow">Beyond manufacturing / Personal project</p><h2 id="personal-title">Small group. Real-world constraints.</h2><p>A mobile-friendly schedule and attendance app, deployed on Google Cloud Run with a Google Sheets backend. A practical balance of accessibility, cost, and maintainability.</p></div>
-      <a class="text-link" href="https://small-group-demo.orange-rat-4119.chatgpt.site" target="_blank" rel="noopener noreferrer">Try the fictional demo <span aria-hidden="true">↗</span><small>Separate browser-only demo · No live group data</small></a>
+    <aside class="personal wrap" aria-labelledby="personal-title">
+      <div><p class="kicker">Personal project</p><h2 id="personal-title">Small-group schedule &amp; attendance</h2><p>A mobile-friendly app hosted on Google Cloud Run, with Google Sheets as a low-cost backend.</p></div>
+      <div><a class="text-link" href="https://small-group-demo.orange-rat-4119.chatgpt.site" target="_blank" rel="noopener noreferrer">Try the fictional demo <span aria-hidden="true">↗</span></a><small>Separate browser-only demo · No live group data</small></div>
     </aside>
   </main>
 
-  <footer class="site-footer" id="contact">
-    <div class="wrap">
-      <div class="footer-main"><div><p class="eyebrow">Let’s connect</p><h2>Better questions.<br>Better engineering decisions.</h2></div><div class="contact-links"><a href="mailto:matthewvchung@gmail.com">matthewvchung@gmail.com <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/matthew-chung-292a0446/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio" target="_blank" rel="noopener noreferrer">Full GitHub portfolio <span aria-hidden="true">↗</span></a></div></div>
-      <div class="footer-note"><p>Public software examples are independent, synthetic-data analogues. Linked investigations use anonymized observed data. No proprietary code, production records, or internal access is provided.</p><span>Matthew Chung <span aria-hidden="true">/</span> Engineering portfolio</span></div>
-    </div>
-  </footer>
+  <footer id="contact"><div class="wrap footer">
+    <div><strong>Matthew Chung</strong><p>Quality engineering · Semiconductor manufacturing</p></div>
+    <nav aria-label="Contact and portfolio"><a class="text-link" href="mailto:matthewvchung@gmail.com">Email Matthew</a><a class="text-link" href="https://www.linkedin.com/in/matthew-chung-292a0446/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio" target="_blank" rel="noopener noreferrer">GitHub portfolio <span aria-hidden="true">↗</span></a></nav>
+  </div></footer>
 </body>
 </html>

@@ -16,15 +16,33 @@ class Page(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.elements = []
+        self.text_nodes = []
+        self.headings = {}
+        self.current_heading = None
         self.feed(HTML)
 
     def handle_starttag(self, tag, attributes):
-        self.elements.append((tag, dict(attributes)))
+        attrs = dict(attributes)
+        self.elements.append((tag, attrs))
+        if tag in {"h1", "h2", "h3"}:
+            self.current_heading = attrs.get("id")
+            if self.current_heading:
+                self.headings[self.current_heading] = []
+
+    def handle_data(self, data):
+        self.text_nodes.append((len(self.elements) - 1, data))
+        if self.current_heading:
+            self.headings[self.current_heading].append(data)
+
+    def handle_endtag(self, tag):
+        if tag in {"h1", "h2", "h3"}:
+            self.current_heading = None
 
 
 class SiteChecks(unittest.TestCase):
     def setUp(self):
-        self.elements = Page().elements
+        self.page = Page()
+        self.elements = self.page.elements
 
     def test_local_assets_and_anchors_resolve(self):
         ids = [a["id"] for _, a in self.elements if "id" in a]
@@ -98,12 +116,25 @@ class SiteChecks(unittest.TestCase):
         self.assertFalse((DIST / ".openai").exists())
         self.assertFalse((DIST / "CNAME").exists())
 
-    def test_github_near_top_and_both_flagships_present(self):
-        hero = HTML.split('class="capability-strip')[0]
-        self.assertGreaterEqual(hero.count("https://github.com/"), 2)
-        self.assertIn("Manufacturing<br> Yield Platform", HTML)
-        self.assertIn("Manufacturing<br> Application Platform", HTML)
-        self.assertIn("Supplier qualification, technical audits", HTML)
+    def test_quality_work_and_public_links_precede_flagships(self):
+        main = next(i for i, (tag, _) in enumerate(self.elements) if tag == "main")
+        flagships = next(i for i, (_, a) in enumerate(self.elements) if a.get("id") == "flagships")
+        early_links = {a["href"] for tag, a in self.elements[main:flagships] if tag == "a"}
+        self.assertIn("https://github.com/4sy8zwp9hz-netizen/manufacturing-software-portfolio", early_links)
+        studies = "https://4sy8zwp9hz-netizen.github.io/webpage_presentation_example/studies/"
+        for study in ("resistance", "qualification"):
+            self.assertIn(f"{studies}{study}/", early_links)
+        intro = " ".join(" ".join(data for i, data in self.page.text_nodes
+                                  if main <= i < flagships).lower().split())
+        self.assertIn("quality engineering", intro)
+        self.assertRegex(intro, r"qualif\w* suppliers?|supplier qualif\w*")
+        self.assertRegex(intro, r"\baudit\w*")
+
+    def test_two_named_flagship_headings(self):
+        for anchor, name in (("yield-title", "Manufacturing Yield Platform"),
+                             ("platform-title", "Manufacturing Application Platform")):
+            words = self.page.headings.get(anchor, [])
+            self.assertEqual(" ".join(" ".join(words).split()), name)
 
     def test_scope_and_measurement_labels(self):
         for phrase in (
